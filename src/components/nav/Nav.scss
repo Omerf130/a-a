@@ -1,0 +1,93 @@
+@use "../../assets/styles/variables" as *;
+
+.nav-container {
+  background-color: $secondary-transparent;
+  position: sticky;
+  top: 0;
+  .logo {
+    background: url("../../assets/pics/WhatsApp\ Image\ 2025-06-11\ at\ 20.35.03.jpeg")
+      no-repeat center center/cover;
+    width: 100px;
+    height: 100px;
+  }
+  .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    .nav-list {
+      direction: rtl;
+      display: flex;
+      gap: $gap-medium;
+      font-size: $font-lg;
+      a {
+        color: $third-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav-wrapper-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+
+    .nav {
+      .hamburger {
+        font-size: $font-md;
+        cursor: pointer;
+        transition: all 1s ease;
+      }
+      .open {
+        transform: rotate(90deg);
+      }
+      .nav-list {
+        position: fixed;
+        background-color: $primary-color;
+
+        box-shadow: $shadow;
+        top: 0;
+        right: -100vw;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-xl;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        font-size: $font-md;
+        padding: 0;
+        transition: all 1s ease;
+        a {
+          color: $third-color;
+          text-decoration: none;
+          color: $third-color;
+          text-decoration: none;
+          padding-bottom: $gap-xl;
+          border-bottom: 1px solid #0000002b;
+          width: 90%;
+          text-align: center;
+        }
+
+        .close-icon {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 30px;
+          cursor: pointer;
+          transform: rotate(0deg);
+          transition: transform 1s ease;
+        }
+
+        &.show {
+          right: 0;
+          .close-icon {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}
