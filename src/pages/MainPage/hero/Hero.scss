@@ -4,6 +4,27 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      align-items: flex-end;
+      .hero-title {
+        font-size: 64px;
+        padding: 20px 10px;
+      }
+      .hero-subtitle {
+        font-size: 30px;
+      }
+    }
+    .hero-btn {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      padding: 8px 6px;
+      cursor: pointer;
+      border-radius: 14px;
+    }
   }
   video {
     width: 100%;

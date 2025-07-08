@@ -1,0 +1,49 @@
+@use "../../../assets/styles/variables" as *;
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap-large;
+  padding: $padding-main;
+  .about-me-title {
+  }
+  .about-me-subtitle {
+    text-align: center;
+  }
+  .about-me-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: $gap-medium;
+    img {
+      width: 300px;
+      height: 200px;
+    }
+    .card-1 {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      .content {
+        flex: 1;
+        text-align: right;
+      }
+      img {
+        flex: 1;
+      }
+    }
+    .card-2 {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      .content {
+        flex: 1;
+        text-align: right;
+      }
+      img {
+        flex: 1;
+      }
+    }
+  }
+}

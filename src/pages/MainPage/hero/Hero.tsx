@@ -5,11 +5,11 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <div className="content">
-        <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,
-          consequatur?
+        <div className="hero-content">
+          <p className="hero-title">'אטיאס אשכנזי ושות</p>
+          <p className="hero-subtitle">מחלקת מקרקעין | מחלקת בתים משותפים | מחלקת נזיקין</p>
         </div>
-        <button>Test</button>
+        <button className="hero-btn">צור קשר!</button>
       </div>
       <video autoPlay muted loop>
         <source src={videoSrc} />
