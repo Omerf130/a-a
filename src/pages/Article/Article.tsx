@@ -1,29 +1,37 @@
 import { useEffect, useState } from "react";
 import mammoth from "mammoth";
 import "./Article.scss"
+import { useParams } from "react-router-dom";
 
 const Article = () => {
-  const [html, setHtml] = useState('');
-  console.log(html)
+  const [htmlContent, setHtmlContent] = useState<string>("");
+  const {id} = useParams();
+ if(!id) return <div>Loading...</div>
 
   useEffect(() => {
-    fetch('/articles/article1.docx') // must be placed inside /public folder
-      .then(response => response.arrayBuffer())
-      .then(arrayBuffer => mammoth.convertToHtml({ arrayBuffer }))
-      .then(result => {
-        setHtml(result.value);
-      })
-      .catch(err => {
-        console.error('Error loading Word file:', err);
-      });
+    const loadDocx = async () => {
+      try {
+        const response = await fetch(`/articles/article${id}.docx`);
+        const arrayBuffer = await response.arrayBuffer();
+
+        const result = await mammoth.convertToHtml({ arrayBuffer });
+        setHtmlContent(result.value);
+      } catch (error) {
+        console.error("Error loading Word document:", error);
+      }
+    };
+
+    loadDocx();
   }, []);
 
   return (
-    <article>
-      <h1>📄 Legal Article</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </article>
+    <div className="article">
+      <div
+        style={{ textAlign: "right", direction: "rtl" }}
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+      />
+    </div>
   );
 };
 
-export default Article
+export default Article;

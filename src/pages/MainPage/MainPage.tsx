@@ -1,4 +1,5 @@
 import AboutMe from './AboutMe/AboutMe'
+import Articles from './articles/Articles'
 import Hero from './hero/Hero'
 
 const MainPage = () => {
@@ -6,6 +7,7 @@ const MainPage = () => {
     <div className='main-page-container'>
       <Hero/>
       <AboutMe/>
+      <Articles/>
     </div>
   )
 }
