@@ -4,6 +4,7 @@ const useWindowWidth = (maxWidth: number) => {
   const [isBelow, setIsBelow] = useState(false);
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   },[maxWidth])
