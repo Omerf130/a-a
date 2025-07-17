@@ -3,6 +3,7 @@ import useWindowWidth from "../../hooks/useWindowWidth";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import logo from "../../assets/pics/logo.png";
 
 const navLinks = [
   { href: "#about", label: "אודות" },
@@ -25,8 +26,9 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <div className={isMobile ? "nav-wrapper-mobile" : "nav-wrapper"}>
-        <div className="logo" />
-
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
         {isMobile ? (
           <div className="nav">
             <GiHamburgerMenu
@@ -34,7 +36,10 @@ const Nav = () => {
               onClick={() => setIsOpen(!isOpen)}
             />
             <nav className={`nav-list ${isOpen ? "show" : ""}`}>
-              <IoMdClose className="close-icon" onClick={() => setIsOpen(false)}/>
+              <IoMdClose
+                className="close-icon"
+                onClick={() => setIsOpen(false)}
+              />
               {renderLinks()}
             </nav>
           </div>

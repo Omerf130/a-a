@@ -1,13 +1,13 @@
+import React, { useEffect, useState } from "react";
 import mammoth from "mammoth";
-import "./accessability.scss";
-import { useEffect, useState } from "react";
+import "./AboutCompany.scss";
 
-const accessability = () => {
+const AboutCompany = () => {
   const [htmlContent, setHtmlContent] = useState<string>("");
   useEffect(() => {
     const loadDocx = async () => {
       try {
-        const response = await fetch(`/accessability/accessability.docx`);
+        const response = await fetch(`/aboutCompany/aboutCompany.docx`);
         const arrayBuffer = await response.arrayBuffer();
 
         const result = await mammoth.convertToHtml({ arrayBuffer });
@@ -20,7 +20,7 @@ const accessability = () => {
     loadDocx();
   }, []);
   return (
-    <div className="accessability-container">
+    <div className="about-company-container">
       <div
         style={{ textAlign: "right", direction: "rtl" }}
         dangerouslySetInnerHTML={{ __html: htmlContent }}
@@ -29,4 +29,4 @@ const accessability = () => {
   );
 };
 
-export default accessability;
+export default AboutCompany;

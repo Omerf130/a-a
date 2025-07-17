@@ -8,8 +8,6 @@ const AboutMe = () => {
 
   return (
     <div className="about-me-container">
-      <h1 className="about-me-title">אודותינו</h1>
-      <div className="about-me-subtitle">משרד עורכי הדין אטיאס אשכנזי 'ושות' מתמחה במשפט אזרחי עם דגש על דיני מקרקעין, בתים משותפים, נזיקין, צוואות והסכמי ממון. אנו מאמינים בפתרונות חכמים, יצירתיים ומבבוססי ניסיון - בגובה עיניים ולתוצאות</div>
       <div className="about-me-cards">
         <div className="card-1">
           <div className="content">

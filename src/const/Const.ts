@@ -9,7 +9,7 @@ export const CONSTS = {
 
 export const ABOUT_CONSTS = [
   {
-    title: "עלינו",
+    title: "עורך דין צביקה אשכנזי",
     subtitle: "מי אנחנו ומה אנחנו עושים",
     img: {
       src: "/src/assets/pics/avatar1.avif",

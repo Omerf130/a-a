@@ -1,30 +1,35 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { ABOUT_CONSTS } from '../../const/Const';
-import "./About.scss"
+import { useParams } from "react-router-dom";
+import mammoth from "mammoth";
+import { useEffect, useState } from "react";
+import "./About.scss";
 
 const About = () => {
+  const [htmlContent, setHtmlContent] = useState<string>("");
   const { id } = useParams();
-  const index = parseInt(id || '0');
-  const aboutData = ABOUT_CONSTS[index];
+  if (!id) return <div>Loading...</div>;
 
-  if (!aboutData) {
-    return <div>לא נמצא מידע על מזהה זה.</div>;
-  }
+    useEffect(() => {
+      const loadDocx = async () => {
+        try {
+          const response = await fetch(`/about/about${id}.docx`);
+          const arrayBuffer = await response.arrayBuffer();
+
+          const result = await mammoth.convertToHtml({ arrayBuffer });
+          setHtmlContent(result.value);
+        } catch (error) {
+          console.error("Error loading Word document:", error);
+        }
+      };
+
+      loadDocx();
+    }, []);
 
   return (
-    <div className="about-container">
-      <h1>{aboutData.title}</h1>
-      <h2>{aboutData.subtitle}</h2>
-      <img src={aboutData.img.src} alt={aboutData.img.alt} />
-      <div className="about-content">
-        {aboutData.content.map((section, idx) => (
-          <div key={idx} className="about-section">
-            <h3>{section.header}</h3>
-            <p>{section.para}</p>
-          </div>
-        ))}
-      </div>
+    <div className="about-container" id="about">
+      <div
+        style={{ textAlign: "right", direction: "rtl" }}
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+      />
     </div>
   );
 };

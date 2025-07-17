@@ -11,11 +11,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <a href="#">אודות</a>
+        <a href="#about">אודות</a>
         <a href="#">תחומי התמחות</a>
         <a href="#">מאמרים</a>
-        <a href="#">הצהרצ נגישות</a>
-        <a href="#">הצהרת פרטיות</a>
+        <a onClick={() => {navigate("/accessability")}}>הצהרת נגישות</a>
+        <a onClick={() => {navigate("/privacy")}}>הצהרת פרטיות</a>
       </div>
       <div className="footer-icons">
         <FaWhatsapp/>
