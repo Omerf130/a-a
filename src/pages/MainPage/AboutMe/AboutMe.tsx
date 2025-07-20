@@ -22,9 +22,9 @@ const AboutMe = () => {
             </p>
             <button
               className="btn content-btn"
-              onClick={() => navigate("/about/0")}
+              onClick={() => navigate("/about/1")}
             >
-              Read
+              להמשך קריאה
             </button>
           </div>
         </div>
@@ -39,9 +39,9 @@ const AboutMe = () => {
             </p>
             <button
               className="btn content-btn"
-              onClick={() => navigate("/about/1")}
+              onClick={() => navigate("/about/2")}
             >
-              Read
+              להמשך קריאה
             </button>
           </div>
         </div>

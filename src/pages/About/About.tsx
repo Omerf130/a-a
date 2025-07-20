@@ -8,21 +8,23 @@ const About = () => {
   const { id } = useParams();
   if (!id) return <div>Loading...</div>;
 
-    useEffect(() => {
-      const loadDocx = async () => {
-        try {
-          const response = await fetch(`/about/about${id}.docx`);
-          const arrayBuffer = await response.arrayBuffer();
+  useEffect(() => {
+    const loadDocx = async () => {
+      try {
+        const response = await fetch(`/about/about${id}.docx`);
+        const arrayBuffer = await response.arrayBuffer();
 
-          const result = await mammoth.convertToHtml({ arrayBuffer });
-          setHtmlContent(result.value);
-        } catch (error) {
-          console.error("Error loading Word document:", error);
-        }
-      };
+        const result = await mammoth.convertToHtml({ arrayBuffer });
+        setHtmlContent(result.value);
+      } catch (error) {
+        console.error("Error loading Word document:", error);
+      }
+    };
 
-      loadDocx();
-    }, []);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    loadDocx();
+  }, []);
 
   return (
     <div className="about-container" id="about">
