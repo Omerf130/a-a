@@ -14,7 +14,7 @@ const slidesData = [
   },
   {
     description:
-      "בבניינים משותפים רבים בישראל, השימוש ברכוש המשותף הוא נושא נפיץ שעלול להוביל לסכסוכים בין שכנים. אחד המקרים השכיחים ביותר הוא התקנת סוכך לחנייה - פעולה שנראית לכאורה פשוטה, אך עשויה להוביל למחלוקות משפטיות. אז מתי סוכך לחניה הופך לבעיה? ומתי השימוש בו נחשב סביר? נבחן זאת דרך מקרה אמיתי שנדון בפני המפקח על רישום המקרקעין.",
+      "בבניינים משותפים רבים בישראל, השימוש ברכוש המשותף הוא נושא נפיץ שעלול להוביל לסכסוכים בין שכנים. אחד המקרים השכיחים ביותר הוא התקנת סוכך לחנייה - פעולה שנראית לכאורה פשוטה, אך עשויה להוביל למחלוקות משפטיות. אז מתי סוכך לחניה הופך לבעיה? ומתי השימוש בו נחשב סביר?",
     headline: "שימוש סביר בסוכך לחנייה ברכוש משותף - מתי זה הופך לבעיה משפטית?",
     image:
       "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
@@ -52,7 +52,7 @@ const slidesData = [
 
 const Articles = () => {
   return (
-    <div id="articles">
+    <div id="articles" className="articles-container">
       <Carousel
         additionalTransfrom={0}
         arrows
@@ -74,18 +74,24 @@ const Articles = () => {
         responsive={{
           desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3,
+            items: 5,
             partialVisibilityGutter: 0,
           },
           tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 640 },
+            items: 3,
+            partialVisibilityGutter: 0,
+          },
+          smallTablet: {
+            breakpoint: { max: 640, min: 484 },
             items: 2,
             partialVisibilityGutter: 0,
           },
           mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 484, min: 0 },
             items: 1,
             partialVisibilityGutter: 0,
+            slidesToSlide: 1,
           },
         }}
         rewind={false}

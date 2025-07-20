@@ -13,7 +13,7 @@ const Slide = ({description, headline, image, id}:SlideProps) => {
     <div className="slide-card" dir="rtl">
     <img className="slide-image" src={image} alt={headline} />
     <div className="slide-content">
-      <h3 className="slide-headline">{headline}</h3>
+      <h4 className="slide-headline">{headline}</h4>
       <p className="slide-description">{description}</p>
       <button className="slide-button" onClick={() => navigate(`/article/${id}`)}>לקריאה נוספת</button>
     </div>

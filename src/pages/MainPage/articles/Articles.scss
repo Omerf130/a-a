@@ -1,5 +1,9 @@
 @use "../../../assets/styles/variables" as *;
 
+
+.articles-container {
+  padding: $padding-main;
+}
 // Center the carousel container and apply RTL
 .container {
   padding: 2rem 0;
@@ -12,14 +16,20 @@
   padding: 0 12px;
 }
 
+@media (max-width: 484px) {
+  .react-multi-carousel-item {
+    padding: 0; // Remove padding on smallest screens
+  }
+}
+
 // Optional: smooth slide transition
 .react-multi-carousel-track {
   transition: transform 0.5s ease;
 }
 
-.react-multi-carousel-item {
-  width: 240px !important;
-}
+// .react-multi-carousel-item {
+//   width: 240px !important;
+// }
 // Slide card styling
 .slide-card {
   display: flex;
@@ -40,38 +50,41 @@
 
 .slide-image {
   width: 100%;
-  height: 150px;
+  height: 140px;
   object-fit: cover;
 }
 
 // Slide content styling
 .slide-content {
-  padding: 20px;
+  height: 100%;
+  padding: 5px 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 7px;
   text-align: right;
 
   .slide-headline {
     font-size: 1.2rem;
     font-weight: 600;
     color: #333;
+    margin: 0;
   }
 
   .slide-description {
-    font-size: 1rem;
+    font-size: $font-size-base-2;
     color: #555;
     line-height: 1.5;
+    margin: 0;
   }
 
   .slide-button {
     align-self: flex-start;
     background-color: $third-color;
     color: #fff;
-    padding: 10px 18px;
+    padding: 6px 14px;
     border: none;
     border-radius: 8px;
-    font-size: 0.95rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 

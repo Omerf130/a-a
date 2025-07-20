@@ -1,12 +1,11 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutCompany.scss";
 
 const AboutCompany = () => {
   const navigate = useNavigate();
   return (
-    <div className="about-me-container">
-      <h1 className="about-me-title" id="aboutCompany">
+    <div className="about-me-container" id="aboutCompany">
+      <h1 className="about-me-title">
         אודותינו
       </h1>
       <div className="about-me-subtitle">
