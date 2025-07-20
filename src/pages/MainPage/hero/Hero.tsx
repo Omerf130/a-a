@@ -15,7 +15,7 @@ const Hero = () => {
           <button className="hero-btn">צור קשר</button>
         </div>
       </div>
-      <video autoPlay muted loop>
+      <video autoPlay muted loop playsInline>
         <source src={videoSrc} />
       </video>
     </div>

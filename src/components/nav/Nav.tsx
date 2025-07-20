@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import logo from "../../assets/pics/logo.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const navLinks = [
   { href: "#aboutCompany", label: "אודות" },
@@ -17,10 +17,17 @@ const Nav = () => {
   const isMobile = useWindowWidth(640);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const renderLinks = (className = "") =>
     navLinks.map(({ href, label }) => (
-      <a key={href} href={href} onClick={() => setIsOpen(false)} className={className}>
+      <a
+        key={href}
+        href={href}
+        onClick={() => setIsOpen(false)}
+        className={className}
+      >
         {label}
       </a>
     ));
@@ -33,9 +40,6 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <div className={isMobile ? "nav-wrapper-mobile" : "nav-wrapper"}>
-        <div className="logo" onClick={handleLogoClick}>
-          <img src={logo} alt="" />
-        </div>
         {isMobile ? (
           <div className="nav">
             <GiHamburgerMenu
@@ -51,11 +55,16 @@ const Nav = () => {
               <div className="logo" onClick={handleLogoClick}>
                 <img src={logo} alt="" />
               </div>
-              {renderLinks()}
+              {isHome && renderLinks()}
             </nav>
           </div>
         ) : (
-          <nav className="nav-list">{renderLinks()}</nav>
+          <>
+            <div className="logo" onClick={handleLogoClick}>
+              <img src={logo} alt="" />
+            </div>
+            {isHome && <nav className="nav-list">{renderLinks()}</nav>}
+          </>
         )}
       </div>
     </div>
