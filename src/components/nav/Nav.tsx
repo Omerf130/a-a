@@ -19,6 +19,7 @@ const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
+  console.log("isHome", isHome);
 
   const renderLinks = (className = "") =>
     navLinks.map(({ href, label }) => (
@@ -40,7 +41,10 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <div className={isMobile ? "nav-wrapper-mobile" : "nav-wrapper"}>
-        {isMobile ? (
+        <div className="logo" onClick={handleLogoClick}>
+          <img src={logo} alt="" />
+        </div>
+        {isMobile && isHome ? (
           <div className="nav">
             <GiHamburgerMenu
               className={`hamburger ${isOpen ? "open" : ""}`}
@@ -55,14 +59,11 @@ const Nav = () => {
               <div className="logo" onClick={handleLogoClick}>
                 <img src={logo} alt="" />
               </div>
-              {isHome && renderLinks()}
+              {renderLinks()}
             </nav>
           </div>
         ) : (
           <>
-            <div className="logo" onClick={handleLogoClick}>
-              <img src={logo} alt="" />
-            </div>
             {isHome && <nav className="nav-list">{renderLinks()}</nav>}
           </>
         )}
