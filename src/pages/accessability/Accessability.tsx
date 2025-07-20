@@ -1,5 +1,4 @@
 import mammoth from "mammoth";
-import "./accessability.scss";
 import { useEffect, useState } from "react";
 
 const accessability = () => {
