@@ -42,16 +42,18 @@
     button {
       padding: 0.8rem;
       border: none;
-      background-color: #0077ff;
+      background-color: $third-color;
       color: white;
       border-radius: 8px;
       font-size: 1rem;
+      transition: background-color 0.3s ease;
       cursor: pointer;
 
       &:hover {
-        background-color: #005fd1;
+        background-color: #0056b3;
       }
     }
+
   }
 
   .contact-info {

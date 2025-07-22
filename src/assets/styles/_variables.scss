@@ -12,7 +12,8 @@ $primary-color: #F1EFEC;
 $secondary-color: #D4C9BE;
 $third-color: #123458;
 $forth-color: #030303;
-$secondary-transparent: #d4c9beea;
+$secondary-transparent: #d4c9beb9;
+$third-transparent: rgba(212, 201, 190, 0.2);
 
 // Fonts
 $font-family-base: "Poppins", sans-serif;
@@ -33,6 +34,7 @@ $weight-bold: 700;
 // Spacing
 $gap-small: 5px;
 $gap-medium: 10px;
+$gap-lm: 16px;
 $gap-large: 20px;
 $gap-xl: 30px;
 $gap-xxl: 40px;
