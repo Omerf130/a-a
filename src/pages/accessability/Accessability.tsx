@@ -1,5 +1,6 @@
 import mammoth from "mammoth";
 import { useEffect, useState } from "react";
+import "./Accessability.scss"
 
 const accessability = () => {
   const [htmlContent, setHtmlContent] = useState<string>("");

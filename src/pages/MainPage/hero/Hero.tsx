@@ -12,7 +12,7 @@ const Hero = () => {
               מחלקת מקרקעין | מחלקת בתים משותפים | מחלקת נזיקין
             </p>
           </div>
-          <button className="hero-btn">צור קשר</button>
+          <a className="hero-btn" href="#contact">!שיחת ייעוץ ראשונית ללא התחייבות</a>
         </div>
       </div>
       <video autoPlay muted loop playsInline>

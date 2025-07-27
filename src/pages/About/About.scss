@@ -2,7 +2,7 @@
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  direction: rtl; // כיוון ימין לשמאל לטקסט בעברית
+  direction: rtl; 
 
   h1 {
     font-size: 2rem;
@@ -48,5 +48,11 @@
         color: #444;
       }
     }
+  }
+}
+
+@media screen and (max-width:500px) {
+  .about-container {
+    padding: 1rem;
   }
 }

@@ -25,7 +25,7 @@ const Article = () => {
   }, []);
 
   return (
-    <div className="article">
+    <div className="article-container">
       <div
         style={{ textAlign: "right", direction: "rtl" }}
         dangerouslySetInnerHTML={{ __html: htmlContent }}

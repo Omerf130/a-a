@@ -7,10 +7,10 @@ const Contact = () => {
       <div className="contact-content">
         {/* צד שמאל – טופס */}
         <form className="contact-form">
-          <input type="text" placeholder="שם מלא" required />
-          <input type="tel" placeholder="טלפון" required />
-          <input type="email" placeholder="אימייל" required />
-          <input type="text" placeholder="נושא" />
+          <input type="text" placeholder="*שם מלא" required />
+          <input type="tel" placeholder="טלפון*" required />
+          <input type="email" placeholder="*אימייל" required />
+          {/* <input type="text" placeholder="נושא" /> */}
           <textarea placeholder="טקסט חופשי" rows={5} ></textarea>
           <button type="submit">שליחה</button>
         </form>

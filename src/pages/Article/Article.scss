@@ -8,18 +8,24 @@
   color: #111;
 }
 
-.article-container h1, 
-.article-container h2, 
+.article-container h1,
+.article-container h2,
 .article-container h3 {
   color: #333;
   margin-top: 1.5rem;
 }
 
-.article-container strong, 
+.article-container strong,
 .article-container b {
   font-weight: bold;
 }
 
 .article-container p {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .article-container {
+    padding: 1rem;
+  }
 }

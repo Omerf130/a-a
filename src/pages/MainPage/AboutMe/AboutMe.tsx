@@ -12,7 +12,7 @@ const AboutMe = () => {
         <div className="card-1">
           <img src={pic1} alt="" />
           <div className="content">
-            <h2 className="content-title">עורך דין צביקה אשכנזי</h2>
+            <h2 className="content-title">עורך דין ומגשר צביקה אשכנזי</h2>
             <p className="content-desc">
               מקרקעין ובתים משותפים, עורך דין צביקה אשכנזי - מומחה לדיני מקרקעין
               ובתים משותפים, עם ניסיון ייחודי כעוזר המשפטי של המפקחת על רישום
@@ -31,7 +31,7 @@ const AboutMe = () => {
         <div className="card-2">
           <img src={pic2} alt="" />
           <div className="content">
-            <h2 className="content-title">עורכת דין אירה אטיאס</h2>
+            <h2 className="content-title">עורכת דין ומגשרת אירה אטיאס </h2>
             <p className="content-desc">
               נזיקין וביטוח, עורכת דין אטיאס בעלת ניסיון עשיר בניהול תביעות
               נזיקין, תאונות דרכים, נזקי גוף ורשלנות רפואית. מאמינה בליווי אישי,
