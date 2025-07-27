@@ -1,21 +1,103 @@
+import { useState } from "react";
 import "./Contact.scss";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    question: "",
+    topic: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    const { name, phone, email, topic, question } = formData;
+  
+    const message = `*טופס צור קשר*\n\n` +
+      `*שם:* ${name}\n` +
+      `*טלפון:* ${phone}\n` +
+      `*אימייל:* ${email}\n` +
+      `*נושא:* ${topic}\n` +
+      `*שאלה:* ${question}`;
+  
+    const encodedMessage = encodeURIComponent(message);
+  
+    const phoneNumber = "972549001774";
+  
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="contact-container" id="contact">
       <h2 className="contact-title">צור קשר</h2>
       <div className="contact-content">
-        {/* צד שמאל – טופס */}
-        <form className="contact-form">
-          <input type="text" placeholder="*שם מלא" required />
-          <input type="tel" placeholder="טלפון*" required />
-          <input type="email" placeholder="*אימייל" required />
-          {/* <input type="text" placeholder="נושא" /> */}
-          <textarea placeholder="טקסט חופשי" rows={5} ></textarea>
-          <button type="submit">שליחה</button>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="*שם מלא"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="*טלפון"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="*אימייל"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <select
+            className="dropdown"
+            name="topic"
+            id="topic"
+            value={formData.topic}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled hidden>
+              בחר נושא
+            </option>
+            <option value="בתים משותפים/מקרקעין">בתים משותפים/מקרקעין</option>
+            <option value="נזיקין">נזיקין</option>
+            <option value="גישור">גישור</option>
+            <option value="אחר">אחר</option>
+          </select>
+          <textarea
+            name="question"
+            placeholder="שאלה"
+            rows={4}
+            value={formData.question}
+            onChange={handleChange}
+          ></textarea>
+          <button className="btn-submit" type="submit">שליחה</button>
         </form>
 
-        {/* צד ימין – מידע ומפה */}
         <div className="contact-info">
           <h3>פרטי יצירת קשר</h3>
           <p>

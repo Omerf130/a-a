@@ -10,6 +10,7 @@ const slidesData = [
     headline: "הזכות למידע על ניהול הבית המשותף - האם היא מוחלטת?",
     image:
       "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      category:""
   },
   {
     description:
@@ -17,6 +18,7 @@ const slidesData = [
     headline: "שימוש סביר בסוכך לחנייה ברכוש משותף - מתי זה הופך לבעיה משפטית?",
     image:
       "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      category:""
   },
   {
     description:
@@ -24,6 +26,7 @@ const slidesData = [
     headline: "מתי תאושר הפרדת ניהול בבית משותף?",
     image:
       "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      category:""
   },
   {
     description:
@@ -31,6 +34,7 @@ const slidesData = [
     headline: "התקנת מצלמות ברכוש משותף - מה מותר ומה אסור?",
     image:
       "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      category:""
   },
   {
     description:
@@ -38,6 +42,7 @@ const slidesData = [
     headline: "מתי חייב בעל הדירה להשתתף בשיפוץ?",
     image:
       "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      category:""
   },
   {
     description:
@@ -46,6 +51,7 @@ const slidesData = [
       "עושים סדר - מי משלם על תחוזקת הרכוש המשותף בבניין - ולפי מה מחשבים את זה?",
     image:
       "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      category:""
   },
 ];
 
@@ -54,6 +60,7 @@ const Articles = () => {
     <div id="articles" className="articles-container">
       <Carousel
         additionalTransfrom={0}
+        autoPlay={true}  
         arrows
         autoPlaySpeed={3000}
         centerMode={false}

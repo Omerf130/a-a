@@ -19,7 +19,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        {/* <a onClick={() => {handleNavigate("/about")}}>אודות</a> */}
         <a onClick={() => {handleNavigate("/about/1")}}>דיני מקרקעין</a>
         <a onClick={() => {handleNavigate("/about/2")}}>דיני נזיקין</a>
         <a onClick={() => {handleNavigate("/aboutCompany")}}>אודות</a>
@@ -28,14 +27,10 @@ const Footer = () => {
         <a onClick={() => {handleNavigate("/privacy")}}>הצהרת פרטיות</a>
       </div>
       <div className="footer-icons">
-        <FaWhatsapp/>
-        <CiFacebook/>
-        <BsInstagram/>
-        <FaTwitter/>
-      </div>
-      
-      <div className="footer-bottom">
-        <span>מדיניות פרטיות ותנאי שימוש</span>
+        <FaWhatsapp className="icon"/>
+        <CiFacebook className="icon"/>
+        <BsInstagram className="icon"/>
+        <FaTwitter className="icon"/>
       </div>
     </footer>
   );
