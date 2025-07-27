@@ -22,7 +22,7 @@ const NavMobile = ({ links, handleLogoClick }: NavMobileProps) => {
   };
 
   const renderLinks = () =>
-    links.map(({ href, label, isDropdownExist }) => (
+    links.map(({ label, isDropdownExist }) => (
       <div key={label} className="mobile-link">
         <div
           className="mobile-link-main"

@@ -22,7 +22,7 @@ const Footer = () => {
         {/* <a onClick={() => {handleNavigate("/about")}}>אודות</a> */}
         <a onClick={() => {handleNavigate("/about/1")}}>דיני מקרקעין</a>
         <a onClick={() => {handleNavigate("/about/2")}}>דיני נזיקין</a>
-        <a onClick={() => {handleNavigate("/aboutCompany")}}>תחומי התמחות</a>
+        <a onClick={() => {handleNavigate("/aboutCompany")}}>אודות</a>
         {isHomepage && <a href="#articles">מאמרים</a>}
         <a onClick={() => {handleNavigate("/accessability")}}>הצהרת נגישות</a>
         <a onClick={() => {handleNavigate("/privacy")}}>הצהרת פרטיות</a>

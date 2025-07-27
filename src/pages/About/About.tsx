@@ -24,7 +24,7 @@ const About = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     loadDocx();
-  }, []);
+  }, [id]);
 
   return (
     <div className="about-container" id="about">
