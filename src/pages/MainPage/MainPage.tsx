@@ -3,6 +3,8 @@ import AboutMe from './AboutMe/AboutMe'
 import Articles from './articles/Articles'
 import Hero from './hero/Hero'
 import { propertyData, damageData } from '../../const/Articles'
+import Succsses from './succsses/Succsses'
+import Rec from './rec/Rec'
 
 const MainPage = () => {
   return (
@@ -13,6 +15,8 @@ const MainPage = () => {
       <Articles slides={propertyData}/>
       <AboutMe isProperty={false}/>
       <Articles slides={damageData}/>
+      <Succsses/>
+      <Rec/>
     </div>
   )
 }
