@@ -3,11 +3,12 @@ import './Succsses.scss'
 
 interface SuccessProps {
   data: ISuccess[]
+  title: string
 }
-const Succsses = ({data}: SuccessProps) => {
+const Succsses = ({data, title}: SuccessProps) => {
   return (
     <div className="succsses-container">
-      <h1 className="succsses-title">Successes of the Office</h1>
+      <h1 className="succsses-title">{title}</h1>
       <div className="succsses-cards">
         {data.map((item) => (
           <div key={item.id} className="succsses-card">

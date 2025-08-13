@@ -14,10 +14,10 @@ const MainPage = () => {
       <AboutCompany/>
       <AboutMe isProperty={true}/>
       <Articles slides={propertyData} title="מאמרים בנושא מקרקעין ובתים משותפים"/>
-      <Succsses data={propertySuccessData}/>
+      <Succsses data={propertySuccessData} title="הצלחות המשרד בתחום המקרקעין ובתים משותפים"/>
       <AboutMe isProperty={false}/>
       <Articles slides={damageData} title="מאמרים בנושא נזיקין"/>
-      <Succsses data={damageSuccessData}/>
+      <Succsses data={damageSuccessData} title= "הצלחות המשרד בתחום הנזיקין"/>
       <Rec/>
     </div>
   )
