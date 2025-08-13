@@ -1,8 +1,11 @@
 @use "../../../assets/styles/variables" as *;
 
-
 .articles-container {
   padding: $padding-main;
+  .article-title {
+    margin: 10px;
+    text-align: center;
+  }
 }
 // Center the carousel container and apply RTL
 .container {

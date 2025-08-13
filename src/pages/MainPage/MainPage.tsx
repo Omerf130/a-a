@@ -5,6 +5,7 @@ import Hero from './hero/Hero'
 import { propertyData, damageData } from '../../const/Articles'
 import Succsses from './succsses/Succsses'
 import Rec from './rec/Rec'
+import { damageSuccessData, propertySuccessData } from '../../const/Succsses'
 
 const MainPage = () => {
   return (
@@ -12,10 +13,11 @@ const MainPage = () => {
       <Hero/>
       <AboutCompany/>
       <AboutMe isProperty={true}/>
-      <Articles slides={propertyData}/>
+      <Articles slides={propertyData} title="מאמרים בנושא מקרקעין ובתים משותפים"/>
+      <Succsses data={propertySuccessData}/>
       <AboutMe isProperty={false}/>
-      <Articles slides={damageData}/>
-      <Succsses/>
+      <Articles slides={damageData} title="מאמרים בנושא נזיקין"/>
+      <Succsses data={damageSuccessData}/>
       <Rec/>
     </div>
   )

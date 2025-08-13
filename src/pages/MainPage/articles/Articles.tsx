@@ -5,11 +5,13 @@ import "./Articles.scss";
 import type { ISlideData } from "../../../interfaces/interfaces";
 
 interface ArticlesProps {
-  slides: ISlideData[] 
+  slides: ISlideData[]
+  title: string
 }
-const Articles = ({slides}: ArticlesProps) => {
+const Articles = ({slides, title}: ArticlesProps) => {
   return (
     <div id="articles" className="articles-container">
+      <h1 className="article-title">{title}</h1>
       <Carousel
         additionalTransfrom={0}
         autoPlay={true}  

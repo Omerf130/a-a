@@ -11,3 +11,9 @@ export interface ISlideData {
   category: string
   id: number
 }
+
+export interface ISuccess {
+  id: number
+  title: string
+  subtitle: string
+}
