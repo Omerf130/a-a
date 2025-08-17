@@ -16,4 +16,5 @@ export interface ISuccess {
   id: number
   title: string
   subtitle: string
+  pageUrl: string
 }

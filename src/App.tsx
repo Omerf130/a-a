@@ -8,6 +8,7 @@ import Article from "./pages/Article/Article";
 import MainLayout from "./MainLayout";
 import SecondLayout from "./SecondLayout";
 import AboutCompany from "./pages/aboutCompany/AboutCompany";
+import SuccssesPage from "./pages/SuccssesPage/SuccssesPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/about/:id" element={<About />} />
           <Route path="/aboutCompany" element={<AboutCompany />} />
+          <Route path="/success/:id" element={<SuccssesPage />} />
           <Route path="/accessability" element={<Accessability />} />
           <Route path="/privacy" element={<Privacy />} />
         </Route>

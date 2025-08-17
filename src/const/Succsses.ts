@@ -1,67 +1,19 @@
 import type { ISuccess } from "../interfaces/interfaces";
 
-export const propertySuccessData: ISuccess[]  = [
-  {
-    id: 1,
-    title: "Record-Breaking Year",
-    subtitle: "Our office achieved the highest sales in its history."
-  },
-  {
-    id: 2,
-    title: "Client Satisfaction",
-    subtitle: "Over 95% of clients rated their experience as excellent."
-  },
-  {
-    id: 3,
-    title: "Team Growth",
-    subtitle: "We expanded our team with top industry professionals."
-  },
-  {
-    id: 4,
-    title: "Award Recognition",
-    subtitle: "Recognized as the leading office in the region."
-  },
-  {
-    id: 5,
-    title: "Community Engagement",
-    subtitle: "Launched new community outreach and charity programs."
-  },
-  {
-    id: 6,
-    title: "Operational Efficiency",
-    subtitle: "Implemented new tools to improve workflow and productivity."
-  },
-];
+export const propertySuccessData: ISuccess = {
+  id: 1,
+  title:
+    "ניצחון ללקוחותינו: עצרנו שימוש חורג בדירת מגורים, החזרנו את החצר המשותפת לשימוש כל הדיירים, והבטחנו למרשתנו שקט ואיכות חיים – לצד חיוב הנתבעים בהוצאות משמעותיות.",
+  subtitle: `בעלת דירה בחיפה סבלה מפגיעה מתמשכת ברכוש המשותף ובשגרת חייה, כאשר שכנים הפכו את דירתם למשרד חקירות ופלשו לחצר.  
+באמצעות ייצוג משפטי מקצועי הוכחנו את ההפרות ואת הנזק שנגרם לה.  
+פסק הדין חייב את השכנים לפרק את התוספות, להפסיק את פעילות המשרד ולשלם הוצאות.  
+כך הושבו למרשתנו השקט, איכות החיים והשימוש ההוגן ברכוש המשותף.`,
+pageUrl: "/success/house",
+};
 
-export const damageSuccessData:ISuccess[] = [
-  {
-    id: 1,
-    title: "Record-Breaking Year",
-    subtitle: "Our office achieved the highest sales in its history."
-  },
-  {
-    id: 2,
-    title: "Client Satisfaction",
-    subtitle: "Over 95% of clients rated their experience as excellent."
-  },
-  {
-    id: 3,
-    title: "Team Growth",
-    subtitle: "We expanded our team with top industry professionals."
-  },
-  {
-    id: 4,
-    title: "Award Recognition",
-    subtitle: "Recognized as the leading office in the region."
-  },
-  {
-    id: 5,
-    title: "Community Engagement",
-    subtitle: "Launched new community outreach and charity programs."
-  },
-  {
-    id: 6,
-    title: "Operational Efficiency",
-    subtitle: "Implemented new tools to improve workflow and productivity."
-  },
-];
+export const damageSuccessData: ISuccess = {
+  id: 1,
+  title: "Record-Breaking Year",
+  subtitle: "Our office achieved the highest sales in its history.",
+  pageUrl: "/success/damage",
+};
