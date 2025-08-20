@@ -13,7 +13,7 @@ pageUrl: "/success/house",
 
 export const damageSuccessData: ISuccess = {
   id: 1,
-  title: "Record-Breaking Year",
-  subtitle: "Our office achieved the highest sales in its history.",
+  title: "מהפגיעה – אל הזכאות: סיפור הצלחה אמיתי.",
+  subtitle: "מכונאי רכב שנפגע בתאונת עבודה קיבל בזכותנו הכרה בנכות וזכאות לקצבה חודשית לשנתיים. כשעורכי דין מנוסים מנהלים את ההליך, התוצאה ברורה – זכויות שמגיעות לך באמת.",
   pageUrl: "/success/damage",
 };

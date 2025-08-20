@@ -1,4 +1,18 @@
 import type { ISlideData } from "../interfaces/interfaces";
+import pic1 from '../../public/articlePics/articlepic1.jpeg'
+import pic2 from '../../public/articlePics/articlepic2.jpeg'
+import pic3 from '../../public/articlePics/articlepic3.jpeg'
+import pic4 from '../../public/articlePics/articlepic4.jpeg'
+import pic5 from '../../public/articlePics/articlepic5.jpeg'
+import pic6 from '../../public/articlePics/articlepic6.jpeg'
+import pic7 from '../../public/articlePics/articlepic7.jpeg'
+import pic8 from '../../public/articlePics/articlepic8.jpeg'
+import pic9 from '../../public/articlePics/articlepic9.jpeg'
+import pic10 from '../../public/articlePics/articlepic10.jpeg'
+import pic11 from '../../public/articlePics/articlepic11.jpeg'
+import pic13 from '../../public/articlePics/articlepic13.jpeg'
+import pic14 from '../../public/articlePics/articlepic14.jpeg'
+import pic15 from '../../public/articlePics/articlepic15.jpeg'
 
 export const propertyData: ISlideData[] = [
   {
@@ -6,98 +20,98 @@ export const propertyData: ISlideData[] = [
     headline: "הזכות למידע על ניהול הבית המשותף - האם היא מוחלטת?",
     description:
       "אם אתם גרים בבית משותף, ודאי יצא לכם לתהות לא פעם כיצד מתנהלים ענייני התחזוקה, הכספים והשירותים בבניין. מיא אחראי? למי אפשר לפנות אם יש בעיה? והכי חשוב - האם מותר לכם לדעת איך הכסף שלכם מנוהל? התשובה היא כן! בעלי הדירות זכאים לקבל מידע על ניהול הרכוש המשותף, כולל דוחות כספיים והחלטות הנוגעות לאחזקה.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic1,
     category: "real-estate",
   },
   {
     id: 2,
     headline: "שימוש סביר בסוכך לחנייה ברכוש משותף - מתי זה הופך לבעיה משפטית?",
     description:"בבניינים משותפים רבים בישראל, השימוש ברכוש המשותף הוא נושא נפיץ שעלול להוביל לסכסוכים בין שכנים. אחד המקרים השכיחים ביותר הוא התקנת סוכך לחנייה - פעולה שנראית לכאורה פשוטה, אך עשויה להוביל למחלוקות משפטיות. אז מתי סוכך לחניה הופך לבעיה? ומתי השימוש בו נחשב סביר?",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic2,
     category: "real-estate",
   },
   {
     id: 3,
     headline: "מתי תאושר הפרדת ניהול בבית משותף?",
     description:"אחת הסוגייות המורכבות והטעונות ביותר בחיי היום יום של בתים משותפים היא השאלה: האם דייר או קבוצת דיירים יכולים להתנהל בנפרד משאר הבניין - כלכלית, תפעולית וניהולית? השאלה הזאת עולה בעיקר בבתים משותפים בעלי אגפים נפרדים, מבנים כפולים או כאשר מתקיימת תחושת קיפוח של חלק מהדיירים",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic3,
     category: "real-estate",
   },
   {
     id: 4,
     headline: "התקנת מצלמות ברכוש משותף - מה מותר ומה אסור?",
     description:"בשנים האחרונות, סוגיית התקנת מצלמות ברכוש המשותף הפכה לנושא מרכזי בדיונים בין שכנים בבית משותף. מצד אחד, בעלי הדירות מבקשים להתקין מצלמות להגנה על רכושם ושמירה על הביטחון, ומנגד, קיים חשש לפגיעה בפרטיות הדיירים האחרים. הפסיקה מגדירה מספר קריטריונים להערכת חוקיות התקנת מצלמות ברכוש משותף",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic4,
     category: "real-estate",
   },
   {
     id: 5,
     headline: "מתי חייב בעל הדירה להשתתף בשיפוץ?",
     description:"אחד הסכסוכים הנופצים ביותר בין שכנים בבניינין משותפים נוגע לשאלה: האם כל בעל דירה חייב להשתתף בעלויות שיפוץ של הרכוש המשותף - גם אם הוא מתנגד לכך?",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic5,
     category: "real-estate",
   },
   {
     id: 6,
     headline:"עושים סדר - מי משלם על תחוזקת הרכוש המשותף בבניין - ולפי מה מחשבים את זה?",
     description:"לפי סעיף 58(א) לחוק מקרקעין, כל בעל דירה בבניין משותף חייב להשתתף בהוצאות התחזוקה והניהול של הרכוש המשותף, כמו ניקיון, תאורנ, תיקונים ועוד. החישוב נעשה לפי גודל הדירה - כלומר, שטח הרצפה של הדירה עצמה(נטו), בלי חצרות, בלי גינות ובלי מחסנים צמודים.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic6,
     category: "real-estate",
   },
   {
     id: 7,
     headline: "סובלים מרטיבות בדירה? אל תתעלמו - כך תטפלו נכון, בלי להסתבך עם השכן!",
     description: "מדריך קצר על רטיבות בבית משותף, אחריות ומה מותר ואסור לבקש מהמפקחת על רישום מקרקעין.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic7,
     category: "real-estate",
   },
   {
     id: 8,
     headline: "בנייה על גג בית משותף - הזכות, המגבלה והמציאות.",
     description: "רבים רואים בגג הבית המשותף חלל מבוזבז - מקום של שמיים פתוחים שבאמצעות ניצולו ניתן לייצר ערך נדלני רב.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic8,
     category: "real-estate",
   },
   {
     id: 9,
     headline: "האם די בהסכמה שבשתיקה לבנייה בבית משותף?",
     description: "בין שכנים בבית משותף, הסכמה היא מצרך נדיר ולעיתים קרובות - לא נאמרת בקול רם. פסד דין חשוב שפורסם לאחרונה עוסק בדיוק בשאלה הזו.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic9,
     category: "real-estate",
   },
   {
     id: 10,
     headline: "האם קבלן יכול לשמור לעצמו חלקים מהרכוש המשותף ולמכור אותם בעתיד?",
     description: "בעלי דירות רבות מופתעים לגלות - לעיתים באיחור של שנים כי הקבלן שמכר להם את הדירה השאיר לעצמו חלקים מהרכוש המשותף.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic10,
     category: "real-estate",
   },
   {
     id: 11,
     headline: "הסכם חנייה עם שכנים - האם זה הסכם שכנות טובה או התחייבות משפטית?",
     description: "תארו לעצמכם מצב נפוץ: דיירים בבית משותף מחליפים בניהם מקומות חנייה בהסכמה. אחד מהם מוכר את דירתו, הרוכש החדש נכנס לדירה - ואז מתחילה מלחמת עולם קטנה.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic11,
     category: "real-estate",
   },
   {
     id: 13,
     headline: "האם רכשתם דירה עם גג או חצר מוצמדים? ייתכן שלא רכשתם את זכויות הבנייה - והמשמעות עלולה להיות יקרה.",
     description: "רכישת דירה הכוללת גג או חצר מוצמדים נשמעת כמו חלום נדלני - אך האם אתם בטוחים שאתם בעלי הזכות לבנות עליהם?",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic13,
     category: "real-estate",
   },
   {
     id: 14,
     headline: "זכויות בניה בבית משותף - בין חוזה לקניין.",
     description: "לפני הדיון של סוגיית זכויות הבנייה בבית משותף, יש להעמיד את הדברים על דיוקם ולהבחין בין רכוש משותף לזכויות בנייה, אשר אינן מהוות חלק בלתי נפרד מהרכוש המשותף, אלא מהוות נכס עצמאי הנתון להסדרה חוזית נפרדת.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic14,
     category: "real-estate",
   },
   {
     id: 15,
     headline: "מעלון בבית משותף לאדם עם מוגבלויות - בין זכות לנגישות לבין פגיעה ברכוש המשותף.",
     description: "סוגיית התקנת מעלון בבית משותף עבור אדם עם מוגבלות ניצבת על התפר שבין זכויות פרט חוקתיות לבין אינטרסים קנייניים של כלל הדיירים.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic15,
     category: "real-estate",
   },
   {

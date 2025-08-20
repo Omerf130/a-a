@@ -16,7 +16,7 @@ const Succsses = ({data, title}: SuccessProps) => {
           <div key={data.id} className="succsses-card">
             <div className="succsses-card-title">{data.title}</div>
             <div className="succsses-card-subtitle">{data.subtitle}</div>
-            <button className='success-btn' onClick={() => navigate(data.pageUrl)}>button</button>
+            <button className='success-btn' onClick={() => navigate(data.pageUrl)}>לחץ כאן כדי לראות עוד הצלחות של המשרד</button>
           </div>
         }
       </div>
