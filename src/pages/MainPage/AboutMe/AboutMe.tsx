@@ -1,6 +1,6 @@
 import "./AboutMe.scss";
-import pic1 from "../../../assets/pics/pic1.avif";
-import pic2 from "../../../assets/pics/pic2.webp";
+import pic1 from "../../../assets/pics/pic1.jpeg";
+import pic2 from "../../../assets/pics/pic2.jpeg";
 import { useNavigate } from "react-router-dom";
 
 interface AboutMeProps {

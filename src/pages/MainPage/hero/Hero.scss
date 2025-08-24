@@ -2,33 +2,57 @@
 
 .hero-container {
   position: relative;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0; // keep behind content
+  }
+
   .content-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; // above overlay
     .content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       position: relative;
       z-index: 1;
-     
+
       .hero-content {
         display: flex;
         flex-direction: column;
         color: #fff;
         align-items: center;
+
         .hero-title {
           font-size: $hero-title;
           padding: 20px 10px;
         }
+
         .hero-subtitle {
           font-size: $font-lg;
         }
       }
+
       .hero-btn {
         display: flex;
         align-items: center;
@@ -42,21 +66,16 @@
         color: #000;
         text-decoration: none;
         &:hover {
-          color: #FFF;
+          color: #fff;
           background-color: $third-color;
           transform: scale(1.1);
         }
       }
     }
-
-  }
-  video {
-    width: 100%;
   }
 }
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .hero-container {
     .hero-content {
       .hero-title {
@@ -68,8 +87,9 @@
       }
     }
   }
-} 
-@media screen and (max-width:600px) {
+}
+
+@media screen and (max-width: 600px) {
   .hero-container {
     .hero-content {
       .hero-title {
@@ -82,12 +102,13 @@
       }
     }
   }
-} 
-@media screen and (max-width:480px) {
+}
+
+@media screen and (max-width: 480px) {
   .hero-container {
     .hero-content {
       .hero-title {
-        font-size:$hero-title-media-2 !important;
+        font-size: $hero-title-media-2 !important;
         padding: 10px 10px !important;
         margin: 20px 0;
       }
@@ -96,7 +117,7 @@
       }
     }
     .hero-btn {
-      font-size: 14px !important; 
+      font-size: 14px !important;
     }
   }
-} 
+}

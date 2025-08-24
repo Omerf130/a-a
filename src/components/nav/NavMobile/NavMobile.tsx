@@ -2,7 +2,7 @@ import  { useState } from "react";
 import "./NavMobile.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import logo from "../../../assets/pics/logo.png";
+import logo from "../../../assets/pics/logo.jpeg";
 
 import type { INavLink } from "../../../interfaces/interfaces";
 import { useNavigate } from "react-router-dom";

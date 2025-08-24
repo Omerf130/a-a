@@ -13,6 +13,15 @@ import pic11 from '../../public/articlePics/articlepic11.jpeg'
 import pic13 from '../../public/articlePics/articlepic13.jpeg'
 import pic14 from '../../public/articlePics/articlepic14.jpeg'
 import pic15 from '../../public/articlePics/articlepic15.jpeg'
+import pic16 from '../../public/articlePics/articlepic16.jpeg'
+import pic17 from '../../public/articlePics/artcilepic17.jpeg'
+import pic18 from '../../public/articlePics/articlepic18.jpeg'
+import pic19 from '../../public/articlePics/articlepic19.jpeg'
+import pic20 from '../../public/articlePics/articlepic20.jpeg'
+import pic21 from '../../public/articlePics/articlepic21.jpeg'
+import pic22 from '../../public/articlePics/articlepic22.jpeg'
+import pic23 from '../../public/articlePics/articlepic23.jpeg'
+import pic24 from '../../public/articlePics/artcilepic24.jpeg'
 
 export const propertyData: ISlideData[] = [
   {
@@ -118,7 +127,7 @@ export const propertyData: ISlideData[] = [
     id: 16,
     headline: "מעמדן של זכויות בניה בבית משותף: בין רכוש משותף להסכמות חוזיות.",
     description: "פסיקה עדכנית שדנה במעמדן של זכויות הבנייה בבית משותף חידדה פעם נוספת את הגבול בין קניין פרטי, רכוש משותף והיכולת להתנות או לשנות את חלוקת זכויות הבנייה באמצעות הסכמות חוזיות או תקנון מוסכם.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic16,
     category: "real-estate",
   },
 ];
@@ -128,42 +137,56 @@ export const damageData = [
     id: 17,
     headline: "זומנת לועדה רפואית? כך צדע למה כדאי לך להיות מיוצג על ידי עורן דין.",
     description: "פנייה לוועדה רפואית של ביטוח לאומי היא צעד מכריע שיכול לקבוע את עתידך הכלכלי והבריאותי.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic17,
     category: "real-estate",
   },
   {
     id: 18,
     headline: "כיצד להיערך לועדה רפואית? מדריך מקיף לזכויותך ולשיקול דעתה של הוועדה.",
     description: "כאשר אדם חווה התדרדרות במצבו הבריאותי - עקב תאונה, מחלה או מגבלה כרונית - מתעורר הצורך למצות את זכויותיו מול גופים ממסדיים כמו המוסד לביטוח לאומי, מס הכנסה, קרנות הפנסיה, חברות הביטוח, משרד הבריאות או משרד הביטחון.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic18,
     category: "real-estate",
   },
   {
     id: 19,
     headline: "למה חשוב לפנות לעורך דין לאחר תאונת דרכים?",
     description: "תאונות דרכים עלולות לשנות את מהלך החיים ברגע - כאב גופני, השלכות כלכליות והתמודדות לא פשוטה מול גופים ממסדיים כמו חברות ביטוח, ביטוח לאומי או קרנות פנסיה.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic19,
     category: "real-estate",
   },
   {
     id: 20,
     headline: "מענק נכות ותגמולים בתביעה לשמרד הביטחון - זכויות על פי חוק הנכים(תגמולים ושיקום)",
     description: "חוק הנכים - הוא חוק סוציאלי מובהק, אשר מבטא את חובתה המוסרית והמשפטית של מדינת ישראל כלפי חייליה שנפגעו במהלך או עקב שירותם הצבאי.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic20,
     category: "real-estate",
   },
   {
     id: 21,
     headline: "עורך דין או מרכז לשימוש זכויות רפואיות - מה עדיף?",
     description: "בפני אנשים המתמודדים עם מחלה, תאונה או מוגבלות רפואית, ניצבת לעיתים קרובות דילמה: האם לפנות לעורך דין הבקיא בדיני הביטוח הלאומי או להיעזר בשירותיהם של מרכזים פרטיים למימוש זכויות רפואיות?",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic21,
     category: "real-estate",
   },
   {
     id: 22,
     headline: "תאונות אופנוע: זכויות, סיכונים והבדלים משפטיים מתאונות רכב.",
     description: "תאונות אופנוע הן תאונות שכיחות בישראל, והנפגעים בהן עלולים לסבול מפגיעות חמורות במיוחד - הרבה יותר מתאונות רכב רגילות.",
-    image: "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image: pic22,
+    category: "real-estate",
+  },
+  {
+    id: 23,
+    headline: "תאונות אופנוע: זכויות, סיכונים והבדלים משפטיים מתאונות רכב.",
+    description: "תאונות אופנוע הן תאונות שכיחות בישראל, והנפגעים בהן עלולים לסבול מפגיעות חמורות במיוחד - הרבה יותר מתאונות רכב רגילות.",
+    image: pic23,
+    category: "real-estate",
+  },
+  {
+    id: 24,
+    headline: "תאונות אופנוע: זכויות, סיכונים והבדלים משפטיים מתאונות רכב.",
+    description: "תאונות אופנוע הן תאונות שכיחות בישראל, והנפגעים בהן עלולים לסבול מפגיעות חמורות במיוחד - הרבה יותר מתאונות רכב רגילות.",
+    image: pic24,
     category: "real-estate",
   },
 ];

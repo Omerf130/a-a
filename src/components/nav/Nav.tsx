@@ -1,7 +1,7 @@
 import "./Nav.scss";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import { useState } from "react";
-import logo from "../../assets/pics/logo.png";
+import logo from "../../assets/pics/logo.jpeg";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavMobile from "./NavMobile/NavMobile";
 
