@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import logo from "../../../assets/pics/logo.jpeg";
 
 import type { INavLink } from "../../../interfaces/interfaces";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface NavMobileProps {
   links: INavLink[];
