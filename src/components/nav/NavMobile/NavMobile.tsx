@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./NavMobile.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -25,29 +25,57 @@ const NavMobile = ({ links, handleLogoClick }: NavMobileProps) => {
     links.map(({ label, isDropdownExist, href }) => (
       <div key={label} className="mobile-link">
         {isDropdownExist ? (
-        <div
-          className="mobile-link-main"
-          onClick={() => handleDropdownToggle(label)}
-        >
-          <span>{label}</span>
-          <span className="dropdown-toggle">
-            {openDropdown === label ? "-" : "+"}
-          </span>
-        </div>
-      ) : (
-        <a
-          href={href}
-          className="mobile-link-main"
-          onClick={() => setIsOpen(false)}
-        >
-          <span>{label}</span>
-        </a>
-      )}
+          <div
+            className="mobile-link-main"
+            onClick={() => handleDropdownToggle(label)}
+          >
+            <span>{label}</span>
+            <span className="dropdown-toggle">
+              {openDropdown === label ? "-" : "+"}
+            </span>
+          </div>
+        ) : href === "/aboutCompany" ? (
+          <a
+            href={href}
+            className="mobile-link-main"
+            onClick={(e) => {
+              e.preventDefault(); // לא לתת ל-reload לקרות
+              navigate(href);
+              setIsOpen(false);
+            }}
+          >
+            <span>{label}</span>
+          </a>
+        ) : (
+          <a
+            href={href}
+            className="mobile-link-main"
+            onClick={() => setIsOpen(false)}
+          >
+            <span>{label}</span>
+          </a>
+        )}
 
         {isDropdownExist && openDropdown === label && (
           <div className="dropdown-items">
-            <div className="dropdown-item" onClick={() => navigate("/about/1")}>עורך דין צביקה אשכנזי</div>
-            <div className="dropdown-item" onClick={() => navigate("/about/2")}>עורכת דין אירה אטיאס</div>
+            <div
+              className="dropdown-item"
+              onClick={() => {
+                navigate("/about/1");
+                setIsOpen(false);
+              }}
+            >
+              עורך דין צביקה אשכנזי
+            </div>
+            <div
+              className="dropdown-item"
+              onClick={() => {
+                navigate("/about/2");
+                setIsOpen(false);
+              }}
+            >
+              עורכת דין אירה אטיאס
+            </div>
           </div>
         )}
       </div>
