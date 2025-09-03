@@ -63,11 +63,12 @@
   padding: 5px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 7px;
   text-align: right;
+  position: relative;
 
   .slide-headline {
+height: 136px;
     font-size: 1.2rem;
     font-weight: 600;
     color: #333;
@@ -78,7 +79,7 @@
     font-size: $font-size-base-2;
     color: #555;
     line-height: 1.5;
-    margin: 0;
+    margin-bottom: 30px;
   }
 
   .slide-button {
@@ -90,6 +91,8 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 5px;
 
     &:hover {
       background-color: #0056b3;

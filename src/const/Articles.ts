@@ -135,7 +135,7 @@ export const propertyData: ISlideData[] = [
 export const damageData = [
   {
     id: 17,
-    headline: "זומנת לועדה רפואית? כך צדע למה כדאי לך להיות מיוצג על ידי עורן דין.",
+    headline: "זומנת לועדה רפואית? כך תדע למה כדאי לך להיות מיוצג על ידי עורן דין.",
     description: "פנייה לוועדה רפואית של ביטוח לאומי היא צעד מכריע שיכול לקבוע את עתידך הכלכלי והבריאותי.",
     image: pic17,
     category: "real-estate",

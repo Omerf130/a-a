@@ -1,25 +1,14 @@
-import { useState } from "react";
 import "./Hero.scss";
-
-import video1 from "../../../assets/video/video1.mp4";
-import video2 from "../../../assets/video/video2.mp4";
-import video3 from "../../../assets/video/video3.mp4";
-
-const videos = [video1, video2, video3];
+import video from "../../../assets/video/video.mp4";
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleVideoEnd = () => {
-    setCurrentIndex((prev) => (prev + 1) % videos.length);
-  };
 
   return (
     <div className="hero-container">
       <div className="content-wrapper">
         <div className="content">
           <div className="hero-content">
-            <p className="hero-title">'אטיאס אשכנזי ושות</p>
+            <p className="hero-title">'אשכנזי אטיאס ושות</p>
             <p className="hero-subtitle">
               מחלקת מקרקעין | מחלקת בתים משותפים | מחלקת נזיקין
             </p>
@@ -31,13 +20,12 @@ const Hero = () => {
       </div>
 
       <video
-        key={currentIndex}
         autoPlay
         muted
         playsInline
-        onEnded={handleVideoEnd}
+        loop
       >
-        <source src={videos[currentIndex]} type="video/mp4" />
+        <source src={video} type="video/mp4" />
       </video>
 
       {/* Overlay */}

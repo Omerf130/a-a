@@ -16,6 +16,7 @@ const AboutCompany = () => {
         console.error("Error loading Word document:", error);
       }
     };
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
     loadDocx();
   }, []);
