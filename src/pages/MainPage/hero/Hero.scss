@@ -106,6 +106,9 @@
 
 @media screen and (max-width: 480px) {
   .hero-container {
+    video {
+      height: 100dvh;
+    }
     .hero-content {
       .hero-title {
         font-size: $hero-title-media-2 !important;

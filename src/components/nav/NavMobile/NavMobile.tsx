@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import logo from "../../../assets/pics/logo.jpeg";
 
 import type { INavLink } from "../../../interfaces/interfaces";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface NavMobileProps {
   links: INavLink[];
@@ -22,21 +22,27 @@ const NavMobile = ({ links, handleLogoClick }: NavMobileProps) => {
   };
 
   const renderLinks = () =>
-    links.map(({ label, isDropdownExist }) => (
+    links.map(({ label, isDropdownExist, href }) => (
       <div key={label} className="mobile-link">
+        {isDropdownExist ? (
         <div
           className="mobile-link-main"
-          onClick={() =>
-            isDropdownExist ? handleDropdownToggle(label) : setIsOpen(false)
-          }
+          onClick={() => handleDropdownToggle(label)}
         >
           <span>{label}</span>
-          {isDropdownExist && (
-            <span className="dropdown-toggle">
-              {openDropdown === label ? "-" : "+"}
-            </span>
-          )}
+          <span className="dropdown-toggle">
+            {openDropdown === label ? "-" : "+"}
+          </span>
         </div>
+      ) : (
+        <a
+          href={href}
+          className="mobile-link-main"
+          onClick={() => setIsOpen(false)}
+        >
+          <span>{label}</span>
+        </a>
+      )}
 
         {isDropdownExist && openDropdown === label && (
           <div className="dropdown-items">
