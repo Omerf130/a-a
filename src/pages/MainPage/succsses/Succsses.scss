@@ -20,14 +20,14 @@
   .succsses-card {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 12px;
-    width: 280px;
+    height: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
-    padding: 50px 10px 15px 10px;
+    padding: 30px 5px 15px 5px;
 
     &:hover {
       transform: translateY(-5px);
@@ -45,26 +45,56 @@
       font-size: 1rem;
       color: #666;
       line-height: 1.4;
+      text-align: right;
     }
     .success-btn {
-      font-size: 20px;
-      padding: 8px 6px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      background-color: rgba(255, 255, 255, 0.8);
+      align-self: flex-start;
+      background-color: $third-color;
+      color: #fff;
+      padding: 6px 14px;
       border: none;
-      color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+       
+
       &:hover {
-        color: #fff;
-        background-color: $third-color;
-        transform: scale(1.1);
+        background-color: #0056b3;
+
       }
+    }
+
+  }
+}
+
+
+// Add spacing between slides
+.react-multi-carousel-item {
+  padding: 0 12px;
+}
+
+@media (max-width: 484px) {
+  .react-multi-carousel-item {
+    padding: 0; // Remove padding on smallest screens
+  }
+}
+
+// Optional: smooth slide transition
+.react-multi-carousel-track {
+  transition: transform 0.5s ease;
+}
+
+@media (max-width: 480px) {
+  .succsses-container {
+    .succsses-card {
+      padding: 30px 0px 15px 0px;
+      .succsses-card-title, .succsses-card-subtitle {
+        padding: 0 7px;
+      }
+
     }
   }
 }

@@ -3,9 +3,9 @@ import AboutMe from './AboutMe/AboutMe'
 import Articles from './articles/Articles'
 import Hero from './hero/Hero'
 import { propertyData, damageData } from '../../const/Articles'
+import { successDamageData, successHouseData } from '../../const/Succsses'
 import Succsses from './succsses/Succsses'
 import Rec from './rec/Rec'
-import { damageSuccessData, propertySuccessData } from '../../const/Succsses'
 
 const MainPage = () => {
   return (
@@ -14,10 +14,10 @@ const MainPage = () => {
       <AboutCompany/>
       <AboutMe isProperty={true}/>
       <Articles slides={propertyData} title="מאמרים בנושא מקרקעין ובתים משותפים"/>
-      <Succsses data={propertySuccessData} title="הצלחות המשרד בתחום המקרקעין ובתים משותפים"/>
+      <Succsses componentType="house" data={successHouseData} title="הצלחות המשרד בתחום המקרקעין ובתים משותפים"/>
       <AboutMe isProperty={false}/>
       <Articles slides={damageData} title="מאמרים בנושא נזיקין"/>
-      <Succsses data={damageSuccessData} title= "הצלחות המשרד בתחום הנזיקין"/>
+      <Succsses componentType="damage" data={successDamageData} title= "הצלחות המשרד בתחום הנזיקין"/>
       <Rec/>
     </div>
   )
