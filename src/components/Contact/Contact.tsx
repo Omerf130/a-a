@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Contact.scss";
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,9 +23,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  
+  const handleWhatsappSend = () => {
     const { name, phone, email, topic, question } = formData;
   
     const message = `*טופס צור קשר*\n\n` +
@@ -41,7 +40,37 @@ const Contact = () => {
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   
     window.open(whatsappURL, "_blank");
+  }
+
+  const handleEmailJsSend = async () => {
+    const { name,email, topic } = formData;
+  
+    try {
+      await emailjs.send(
+        'service_n010aga',
+        'template_cp4y52b',
+        {name, title:topic, email},
+        {
+          publicKey: 'XSgKtJS2N8WDjUkWO',
+        },
+      );
+      console.log('SUCCESS!');
+    } catch (err) {
+      if (err instanceof EmailJSResponseStatus) {
+        console.log('EMAILJS FAILED...', err);
+        return;
+      }
+    
+      console.log('ERROR', err);
+    }
+  
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await handleEmailJsSend();
+    handleWhatsappSend();
   };
+
 
   return (
     <div className="contact-container" id="contact">
