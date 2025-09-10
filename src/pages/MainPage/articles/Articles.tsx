@@ -7,10 +7,11 @@ import type { ISlideData } from "../../../interfaces/interfaces";
 interface ArticlesProps {
   slides: ISlideData[]
   title: string
+  sectionName: string
 }
-const Articles = ({slides, title}: ArticlesProps) => {
+const Articles = ({slides, title, sectionName}: ArticlesProps) => {
   return (
-    <div id="articles" className="articles-container">
+    <div id={sectionName} className="articles-container">
       <h1 className="article-title">{title}</h1>
       <Carousel
         additionalTransfrom={0}

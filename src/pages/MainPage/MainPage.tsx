@@ -13,10 +13,10 @@ const MainPage = () => {
       <Hero/>
       <AboutCompany/>
       <AboutMe isProperty={true}/>
-      <Articles slides={propertyData} title="מאמרים בנושא מקרקעין ובתים משותפים"/>
+      <Articles slides={propertyData} title="מאמרים בנושא מקרקעין ובתים משותפים" sectionName="propertySection"/>
       <Succsses componentType="house" data={successHouseData} title="הצלחות המשרד בתחום המקרקעין ובתים משותפים"/>
       <AboutMe isProperty={false}/>
-      <Articles slides={damageData} title="מאמרים בנושא נזיקין"/>
+      <Articles slides={damageData} title="מאמרים בנושא נזיקין" sectionName="damageSection"/>
       <Succsses componentType="damage" data={successDamageData} title= "הצלחות המשרד בתחום הנזיקין"/>
       <Rec/>
     </div>

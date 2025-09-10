@@ -8,7 +8,7 @@ import NavMobile from "./NavMobile/NavMobile";
 const navLinks = [
   { href: "/aboutCompany", label: "אודות", isDropdownExist: false },
   { href: "#aboutMe", label: "תחומי התמחות", isDropdownExist: true },
-  { href: "#articles", label: "מאמרים", isDropdownExist: false },
+  { href: "#articles", label: "מאמרים", isDropdownExist: true },
   { href: "#contact", label: "צור קשר", isDropdownExist: false },
 ];
 
@@ -40,7 +40,7 @@ const Nav = () => {
           <a
             href={href}
             onClick={(e) => {
-              e.preventDefault(); // מניעת reload
+              e.preventDefault();
               navigate(href);
             }}
           >
@@ -49,19 +49,35 @@ const Nav = () => {
         ) : (
           <a href={href}>{label}</a>
         )}
-
+  
+        {/* 🔹 Dropdown content */}
         {isDropdownExist && (
           <div
             className={`dropdown-content ${
               openDropdown === label ? "visible" : ""
             }`}
           >
-            <a href="#" onClick={() => navigate("/about/1")}>
-              עורך דין צביקה אשכנזי
-            </a>
-            <a href="#" onClick={() => navigate("/about/2")}>
-              עורכת דין אירה אטיאס
-            </a>
+            {label === "תחומי התמחות" && (
+              <>
+                <a href="#" onClick={() => navigate("/about/1")}>
+                  עורך דין צביקה אשכנזי
+                </a>
+                <a href="#" onClick={() => navigate("/about/2")}>
+                  עורכת דין אירה אטיאס
+                </a>
+              </>
+            )}
+  
+            {label === "מאמרים" && (
+              <>
+                <a href="#propertySection">
+                  מקרקעין
+                </a>
+                <a href="#damageSection">
+                  נזיקין
+                </a>
+              </>
+            )}
           </div>
         )}
       </div>

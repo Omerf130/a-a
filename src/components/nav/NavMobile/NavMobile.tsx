@@ -58,24 +58,55 @@ const NavMobile = ({ links, handleLogoClick }: NavMobileProps) => {
 
         {isDropdownExist && openDropdown === label && (
           <div className="dropdown-items">
-            <div
-              className="dropdown-item"
-              onClick={() => {
-                navigate("/about/1");
-                setIsOpen(false);
-              }}
-            >
-              עורך דין צביקה אשכנזי
-            </div>
-            <div
-              className="dropdown-item"
-              onClick={() => {
-                navigate("/about/2");
-                setIsOpen(false);
-              }}
-            >
-              עורכת דין אירה אטיאס
-            </div>
+            {label === "תחומי התמחות" && (
+              <>
+                <div
+                  className="dropdown-item"
+                  onClick={() => {
+                    navigate("/about/1");
+                    setIsOpen(false);
+                  }}
+                >
+                  עורך דין צביקה אשכנזי
+                </div>
+                <div
+                  className="dropdown-item"
+                  onClick={() => {
+                    navigate("/about/2");
+                    setIsOpen(false);
+                  }}
+                >
+                  עורכת דין אירה אטיאס
+                </div>
+              </>
+            )}
+
+            {label === "מאמרים" && (
+              <div className="mobile-dropdown">
+                <div>
+                  <a
+                    href="#propertySection"
+                    className="dropdown-item"
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    מקרקעין
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="#damageSection"
+                    className="dropdown-item"
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    נזיקין
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
