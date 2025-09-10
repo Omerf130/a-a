@@ -19,6 +19,8 @@ function App() {
           <Route path="/about/:id" element={<About />} />
           <Route path="/aboutCompany" element={<AboutCompany />} />
           <Route path="/success/:id" element={<SuccssesPage />} />
+          <Route path="/house/:id" element={<SuccssesPage />} />
+          <Route path="/damage/:id" element={<SuccssesPage />} />
           <Route path="/accessability" element={<Accessability />} />
           <Route path="/privacy" element={<Privacy />} />
         </Route>

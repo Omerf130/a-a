@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import mammoth from "mammoth";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const SuccessesPage = () => {
   const [htmlContent, setHtmlContent] = useState<string>("");
   const { id } = useParams();
+  const location = useLocation()
   if (!id) return <div>Loading...</div>;
-  console.log(id);
 
   useEffect(() => {
+
     const loadDocx = async () => {
+      const endPoint = location.pathname.split("/")[1];
       try {
-        const response = await fetch(`/success/${id}.docx`);
+        const response = await fetch(`/success/${endPoint}/${endPoint}${id}.docx`);
         const arrayBuffer = await response.arrayBuffer();
 
         const result = await mammoth.convertToHtml({ arrayBuffer });
