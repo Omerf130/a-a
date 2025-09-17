@@ -95,9 +95,24 @@ const Rec: React.FC = () => {
   return (
     <div
       className="rec-gallery"
-      style={{ maxWidth: "800px", margin: "40px auto"}}
+      style={{ maxWidth: "800px", margin: "40px auto" }}
     >
-      <Typography variant="h3" sx={{position:"relative", textAlign:"center", marginBottom:"15px"}}>מה הלקוחות שלי אומרים</Typography>
+      <Typography
+        variant="h3"
+        sx={{
+          textAlign: "center",
+          marginBottom: "2rem",
+          color: "#333",
+          fontSize: "2.3rem", // default (desktop)
+
+          // shrink font size under 500px
+          "@media (max-width:500px)": {
+            fontSize: "2.3rem",
+          },
+        }}
+      >
+        מה הלקוחות שלי אומרים
+      </Typography>
       {/* <SectionTitle title="מה הלקוחות שלי אומרים" className="rec-title" variant="h2"/> */}
 
       <Splide
@@ -128,8 +143,18 @@ const Rec: React.FC = () => {
                 backgroundColor: "rgba(255, 255, 255, 0.4)",
               }}
             >
-              <p style={{ fontSize: "1.2rem", margin: "1rem 0" }}>{rec.text}</p>
-              <p style={{fontStyle:"italic"}}>{rec.author}</p>
+              <p
+                style={{
+                  fontSize: "1.2rem",
+                  margin: "1rem 0",
+                  direction: "rtl",
+                }}
+              >
+                {rec.text}
+              </p>
+              <p style={{ fontStyle: "italic", direction: "rtl" }}>
+                {rec.author}
+              </p>
               <div style={{ color: "#f39c12", fontSize: "1.5rem" }}>
                 {"★".repeat(rec.rating)}
                 {"☆".repeat(5 - rec.rating)}

@@ -9,8 +9,17 @@
   .about-me-title {
     margin: 10px;
     text-align: center;
+    direction: rtl; // ensure Hebrew is handled correctly
+  
+    .title-part {
+      display: inline-block;
+    }
+    .part-2 {
+      direction: ltr;
+    }
   }
   .about-me-subtitle {
+    direction: rtl;
     width: 80%;
     text-align: right;
   }
@@ -42,3 +51,11 @@
     }
   }
 } 
+
+@media screen and (max-width: 480px) {
+  .about-me-title {
+    .title-part {
+      display: block; // each part will go to its own line
+    }
+  }
+}
