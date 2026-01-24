@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="content-wrapper">
         <div className="content">
           <div className="hero-content">
-            <p className="hero-title">'אשכנזי אטיאס ושות</p>
+            <p className="hero-title">'אשכנזי ושות</p>
             <p className="hero-subtitle">
               מחלקת מקרקעין | מחלקת בתים משותפים | מחלקת נזיקין
             </p>

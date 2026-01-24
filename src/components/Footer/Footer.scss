@@ -54,4 +54,21 @@
       height: 20px;
     }
   }
+  .footer-credit {
+    color: rgba(58, 227, 224, 0.5);
+    font-size: 0.85rem;
+    margin: 0;
+    
+    .credit-link {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
 }
