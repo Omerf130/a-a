@@ -31,6 +31,14 @@
     font-size: 18px;
     cursor: pointer;
     transition: all 0.2s ease;
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
     .icon {
       &:hover {
         color: white;

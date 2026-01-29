@@ -76,69 +76,128 @@ const Contact = () => {
     <div className="contact-container" id="contact">
       <h2 className="contact-title">צור קשר</h2>
       <div className="contact-content">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="*שם מלא"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="*טלפון"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="*אימייל"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <select
-            className="dropdown"
-            name="topic"
-            id="topic"
-            value={formData.topic}
-            onChange={handleChange}
-            required
-          >
-            <option value="" disabled hidden>
-              בחר נושא
-            </option>
-            <option value="בתים משותפים/מקרקעין">בתים משותפים/מקרקעין</option>
-            <option value="נזיקין">נזיקין</option>
-            <option value="גישור">גישור</option>
-            <option value="אחר">אחר</option>
-          </select>
-          <textarea
-            name="question"
-            placeholder="שאלה"
-            rows={4}
-            value={formData.question}
-            onChange={handleChange}
-          ></textarea>
-          <button className="btn-submit" type="submit">שליחה</button>
-        </form>
+        <div className="contact-form-wrapper">
+          <div className="form-header">שלח לנו הודעה</div>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">שם מלא *</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="הכנס שם מלא"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="phone">טלפון *</label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="הכנס מספר טלפון"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="email">אימייל *</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="הכנס כתובת אימייל"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="topic">נושא *</label>
+              <select
+                className="dropdown"
+                name="topic"
+                id="topic"
+                value={formData.topic}
+                onChange={handleChange}
+                required
+              >
+                <option value="" disabled hidden>
+                  בחר נושא
+                </option>
+                <option value="בתים משותפים/מקרקעין">בתים משותפים/מקרקעין</option>
+                <option value="נזיקין">נזיקין</option>
+                <option value="גישור">גישור</option>
+                <option value="אחר">אחר</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="question">הודעה</label>
+              <textarea
+                name="question"
+                id="question"
+                placeholder="כתוב את הודעתך כאן..."
+                rows={5}
+                value={formData.question}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+
+            <button className="btn-submit" type="submit">
+              <span>שלח הודעה</span>
+            </button>
+          </form>
+        </div>
 
         <div className="contact-info">
           <h3>פרטי יצירת קשר</h3>
-          <p>
-            <strong>כתובת:</strong> רחוב הדוגמה 123, תל אביב
-          </p>
-          <p>
-            <strong>שעות פעילות:</strong> א'-ה' 09:00–18:00
-          </p>
+          
+          <div className="info-grid">
+            <div className="info-card">
+              <div className="card-header">סניפים</div>
+              <div className="card-content">
+                <div className="branch-item">
+                  <strong>סניף צפון</strong>
+                  <span>שד' ההסתדרות 285, חיפה</span>
+                  <a href="tel:0779978330">077-9978330</a>
+                </div>
+                <div className="branch-divider"></div>
+                <div className="branch-item">
+                  <strong>סניף מרכז</strong>
+                  <span>המסגר 35, תל אביב</span>
+                  <a href="tel:0779973700">077-9973700</a>
+                </div>
+              </div>
+            </div>
+
+            <div className="info-card">
+              <div className="card-header">פרטי התקשרות</div>
+              <div className="card-content">
+                <div className="contact-detail">
+                  <strong>דואר אלקטרוני</strong>
+                  <a href="mailto:azvika@gmail.com">azvika@gmail.com</a>
+                </div>
+                <div className="contact-detail">
+                  <strong>שעות פעילות</strong>
+                  <span>ימים א'-ה', 09:00-18:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="map-container">
             <iframe
               title="map"
-              src="https://maps.google.com/maps?q=32.066157,34.777819&z=15&output=embed"
+              src="https://www.google.com/maps?ll=32.812327,35.073072&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=HaHistadrut+Ave+285+Haifa&output=embed"
               loading="lazy"
               allowFullScreen
             ></iframe>

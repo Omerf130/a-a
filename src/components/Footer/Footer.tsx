@@ -28,7 +28,9 @@ const Footer = () => {
       </div>
       <div className="footer-icons">
         <FaWhatsapp className="icon" />
-        <CiFacebook className="icon" />
+        <a href="https://www.facebook.com/profile.php?id=61587386153696" target="_blank" rel="noopener noreferrer">
+          <CiFacebook className="icon" />
+        </a>
         <BsInstagram className="icon" />
         <FaTwitter className="icon" />
       </div>
