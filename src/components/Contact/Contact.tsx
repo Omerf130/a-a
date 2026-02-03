@@ -76,9 +76,11 @@ const Contact = () => {
     <div className="contact-container" id="contact">
       <h2 className="contact-title">צור קשר</h2>
       <div className="contact-content">
-        <div className="contact-form-wrapper">
-          <div className="form-header">שלח לנו הודעה</div>
-          <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-form-section">
+          <h3 className="spacer-title">&nbsp;</h3>
+          <div className="contact-form-wrapper">
+            <div className="form-header">שלח לנו הודעה</div>
+            <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">שם מלא *</label>
               <input
@@ -156,6 +158,7 @@ const Contact = () => {
               <span>שלח הודעה</span>
             </button>
           </form>
+          </div>
         </div>
 
         <div className="contact-info">
