@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-links">
         <a onClick={() => { handleNavigate("/about/1") }}>דיני מקרקעין</a>
-        <a onClick={() => { handleNavigate("/about/2") }}>דיני נזיקין</a>
+        {/* <a onClick={() => { handleNavigate("/about/2") }}>דיני נזיקין</a> */}
         <a onClick={() => { handleNavigate("/aboutCompany") }}>אודות</a>
         {isHomepage && <a href="#articles">מאמרים</a>}
         <a onClick={() => { handleNavigate("/accessability") }}>הצהרת נגישות</a>

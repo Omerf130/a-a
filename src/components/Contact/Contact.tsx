@@ -136,7 +136,7 @@ const Contact = () => {
                   בחר נושא
                 </option>
                 <option value="בתים משותפים/מקרקעין">בתים משותפים/מקרקעין</option>
-                <option value="נזיקין">נזיקין</option>
+                <option value="ליקויי בנייה">ליקויי בנייה</option>
                 <option value="גישור">גישור</option>
                 <option value="אחר">אחר</option>
               </select>
