@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="hero-content">
             <p className="hero-title">'אשכנזי ושות</p>
             <p className="hero-subtitle">
-              מחלקת ליקויי בניה | מחלקת בתים משותפים | מחלקת נזיקין
+              מחלקת ליקויי בניה | מחלקת בתים משותפים | ליקויי בנייה
             </p>
           </div>
           <a className="hero-btn" href="#contact">
