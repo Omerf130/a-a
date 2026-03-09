@@ -8,19 +8,21 @@ import NavMobile from "./NavMobile/NavMobile";
 const navLinks = [
   { href: "/aboutCompany", label: "אודות", isDropdownExist: false },
   { href: "#aboutMe", label: "תחומי התמחות", isDropdownExist: true },
-  { href: "#articles", label: "מאמרים", isDropdownExist: true },
+  { href: "#propertySection", label: "מאמרים", isDropdownExist: false },
   { href: "#contact", label: "צור קשר", isDropdownExist: false },
 ];
 
 const Nav = () => {
   const isMobile = useWindowWidth(640);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, _setOpenDropdown] = useState<string | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  const handleDropdownToggle = (label: string) => {
-    setOpenDropdown((prev) => (prev === label ? null : label));
+  const handleDropdownToggle = (_label: string) => {
+    // setOpenDropdown((prev) => (prev === label ? null : label));
+    navigate("/about/1");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const renderLinks = (className = "") =>

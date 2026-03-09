@@ -14,11 +14,13 @@ interface NavMobileProps {
 
 const NavMobile = ({ links, handleLogoClick }: NavMobileProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, _setOpenDropdown] = useState<string | null>(null);
   const navigate = useNavigate();
 
-  const handleDropdownToggle = (label: string) => {
-    setOpenDropdown((prev) => (prev === label ? null : label));
+  const handleDropdownToggle = (_label: string) => {
+    // setOpenDropdown((prev) => (prev === label ? null : label));
+    navigate("/about/1");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const renderLinks = () =>
@@ -30,9 +32,9 @@ const NavMobile = ({ links, handleLogoClick }: NavMobileProps) => {
             onClick={() => handleDropdownToggle(label)}
           >
             <span>{label}</span>
-            <span className="dropdown-toggle">
+            {/* <span className="dropdown-toggle">
               {openDropdown === label ? "-" : "+"}
-            </span>
+            </span> */}
           </div>
         ) : href === "/aboutCompany" ? (
           <a
